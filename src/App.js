@@ -1,23 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
+import Box from './Box.js'
+import BoxList from './BoxList.js'
+import {useState} from 'react'
 
 function App() {
+  const [boxColor, setboxColor] = useState("green");
+
+  const clickHandle = ()=>{
+    setboxColor("red");
+    console.log(boxColor);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <button onClick={clickHandle}>Change color</button>
+      <Box boxColor = {boxColor}/>
     </div>
   );
 }
