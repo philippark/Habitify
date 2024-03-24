@@ -5,7 +5,7 @@ import BoxList from './BoxList.js'
 import {useState, useEffect} from 'react'
 
 function App() {
-  const colors = ["#4B6F44", "#32de84", "#4FFFB0"];
+  const colors = ["#008000", "#32de84", "#90EE90", "#98FB98"];
   let [index, setIndex] = useState(0);
 
   const [boxColor, setboxColor] = useState(colors[index]);
@@ -22,8 +22,7 @@ function App() {
 
   return (
     <div className="App">
-      <button onClick={clickHandle}>Change color</button>
-      <Box boxColor = {boxColor}/>
+      <Box boxColor = {boxColor} clickHandle = {clickHandle}/>
     </div>
   );
 }
