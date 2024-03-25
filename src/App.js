@@ -8,9 +8,9 @@ function App() {
   const colors = ["#008000", "#32de84", "#90EE90", "#98FB98"];
 
   const [boxes, setBoxes] = useState([
-    {id:0, value:0},
-    {id:1, value:1},
-    {id:2, value:2}
+    {id:1, value:2},
+    {id:2, value:1},
+    {id:3, value:0}
   ]);
 
   /*
@@ -30,8 +30,19 @@ function App() {
   */
 
   const changeColor = () => {
+    /*
     console.log(boxes[boxes.length-1].value)
     boxes[boxes.length-1].value += 1;
+
+    setBoxes(boxes);  
+    */
+    let copy = boxes[boxes.length-1];
+    copy.value += 1;
+
+    let newBoxes = boxes.filter(box => box.id !== boxes.length);
+    newBoxes.push(copy);
+
+    setBoxes(newBoxes);
   }
 
   return (
