@@ -15,8 +15,11 @@ code {
 .Box {
   width: 30px;
   height: 30px;
-  padding: 10px;
   margin: 10px;
-  border-radius: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
 
+.center{
+  margin:auto;
 }

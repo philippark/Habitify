@@ -6,7 +6,7 @@ const BoxList = ({boxes, colors}) => {
             {boxes.map((box)=>(
                 
                 <div className = "Box" style = {{backgroundColor:colors[box.value]}}> 
-                    <p>{box.value}</p>
+                    <p id ="val" class = "center">{box.value}</p>
                 </div>
             ))}
         </div>
