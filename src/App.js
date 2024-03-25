@@ -30,14 +30,10 @@ function App() {
   */
 
   const changeColor = () => {
-    /*
-    console.log(boxes[boxes.length-1].value)
-    boxes[boxes.length-1].value += 1;
-
-    setBoxes(boxes);  
-    */
     let copy = boxes[boxes.length-1];
-    copy.value += 1;
+    if (copy.value < colors.length-1){
+      copy.value += 1;
+    }
 
     let newBoxes = boxes.filter(box => box.id !== boxes.length);
     newBoxes.push(copy);
