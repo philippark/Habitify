@@ -5,12 +5,14 @@ import BoxList from './BoxList.js'
 import {useState, useEffect} from 'react'
 
 function App() {
-  const colors = ["#008000", "#32de84", "#90EE90", "#98FB98"];
+  const colors = ["#ebedf0","#9be9a8", "#40c463", "#30a14e", "#216e39"];
 
   const [boxes, setBoxes] = useState([
-    {id:1, value:2},
-    {id:2, value:1},
-    {id:3, value:0}
+    {id:1, value:4},
+    {id:2, value:3},
+    {id:3, value:2},
+    {id:4, value:1},
+    {id:5, value:0}
   ]);
 
   /*
