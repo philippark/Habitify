@@ -1,10 +1,9 @@
 import {useState} from 'react'
 
-const Box = ({boxColor, clickHandle}) => {
+const Box = ({boxColor}) => {
 
     return ( 
         <div className = "Box" style = {{backgroundColor:boxColor}}>
-            <button onClick={clickHandle}>Change</button>
         </div>
      );
 }

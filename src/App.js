@@ -6,6 +6,14 @@ import {useState, useEffect} from 'react'
 
 function App() {
   const colors = ["#008000", "#32de84", "#90EE90", "#98FB98"];
+
+  const [boxes, setBoxes] = useState([
+    {id:0, value:0},
+    {id:1, value:1},
+    {id:2, value:2}
+  ]);
+
+  /*
   let [index, setIndex] = useState(0);
 
   const [boxColor, setboxColor] = useState(colors[index]);
@@ -19,10 +27,23 @@ function App() {
   useEffect(()=>{
     console.log(index);
   })
+  */
+
+  const changeColor = () => {
+    console.log(boxes[boxes.length-1].value)
+    boxes[boxes.length-1].value += 1;
+  }
 
   return (
     <div className="App">
-      <Box boxColor = {boxColor} clickHandle = {clickHandle}/>
+      <BoxList boxes = {boxes} colors = {colors} />
+      {/*
+      <Box boxColor = {boxColor} />
+      <Box boxColor = {boxColor}/>
+      <button onClick = {clickHandle}>Change Color</button>
+  */}
+
+    <button onClick = {changeColor}>Change</button>
     </div>
   );
 }
