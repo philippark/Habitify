@@ -7,29 +7,28 @@ import {useState, useEffect} from 'react'
 function App() {
   const colors = ["#ebedf0","#9be9a8", "#40c463", "#30a14e", "#216e39"];
 
-  const [boxes, setBoxes] = useState([
-    {id:1, value:4},
-    {id:2, value:3},
-    {id:3, value:2},
-    {id:4, value:1},
-    {id:5, value:0}
-  ]);
-
-  /*
-  let [index, setIndex] = useState(0);
-
-  const [boxColor, setboxColor] = useState(colors[index]);
-
-  const clickHandle = ()=>{
-    setIndex(index += 1);
-    setboxColor(colors[index]);
-
-  }
-
-  useEffect(()=>{
-    console.log(index);
-  })
-  */
+  const [boxes, setBoxes] = useState(
+    [
+    [
+      {id:1, value:4},
+      {id:2, value:3},
+      {id:3, value:2},
+      {id:4, value:1},
+      {id:5, value:0},
+      {id:6, value:0},
+      {id:7, value:0}
+    ],
+    [
+      {id:1, value:4},
+      {id:2, value:3},
+      {id:3, value:2},
+      {id:4, value:1},
+      {id:5, value:0},
+      {id:6, value:0},
+      {id:7, value:0}
+    ]
+]
+);
 
   const changeColor = () => {
     let copy = boxes[boxes.length-1];

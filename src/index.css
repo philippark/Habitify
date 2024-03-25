@@ -12,10 +12,15 @@ code {
     monospace;
 }
 
+.Col {
+  display: inline-block;
+  margin-right: 5px;
+}
+
 .Box {
   width: 30px;
   height: 30px;
-  margin: 10px;
+  margin-top: 5px;
   border-radius: 5px;
   text-align: center;
 }
