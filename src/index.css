@@ -23,6 +23,11 @@ code {
   margin-top: 5px;
   border-radius: 5px;
   text-align: center;
+  background-color: #ebedf0;
+}
+
+.Box--active {
+  background-color: darkolivegreen;
 }
 
 .center{
