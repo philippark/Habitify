@@ -3,6 +3,8 @@ import './App.css';
 import Box from './Box.js'
 import BoxList from './BoxList.js'
 import {useState, useEffect} from 'react'
+import Home from "./Home.js"
+import Navbar from "./Navbar.js"
 
 function App() {
   //const colors = ["#ebedf0","#9be9a8", "#40c463", "#30a14e", "#216e39"];
@@ -38,6 +40,10 @@ function App() {
 
   return (
     <div className="App">
+      <Navbar/>
+      <div className = "content">
+        <Home/>
+      </div>
       <BoxList boxes = {boxes} colors = {colors} />
       {/*
       <Box boxColor = {boxColor} />
